@@ -17,7 +17,7 @@ import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         int width = 100;
         int height = 100;
         int pixelSize = 8;
@@ -31,5 +31,6 @@ public class Main {
         frame.setVisible(true);
         frame.setResizable(false);
 
+        PixelUtil.rectangle.fill(Canvas, 0, 0, width, height, Color.RED);
     }
 }
