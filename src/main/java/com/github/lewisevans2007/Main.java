@@ -31,44 +31,5 @@ public class Main {
         frame.setVisible(true);
         frame.setResizable(false);
 
-        int x = width/ 2;
-        int y = height / 2;
-        Color color = Color.WHITE;
-        while (true) {
-            Canvas.setPixel(x, y, color);
-            TimeUnit.MILLISECONDS.sleep(2);
-            x += (int) (Math.random() * 3) - 1;
-            y += (int) (Math.random() * 3) - 1;
-            if (Math.random() < 0.1) {
-                color = new Color((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255));
-            }
-
-            if (x > width) {
-                Canvas.clearCanvas();
-                x = width / 2;
-                y = height / 2;
-                continue;
-            }
-            else if (y > height) {
-                Canvas.clearCanvas();
-                x = width / 2;
-                y = width / 2;
-                continue;
-            }
-            else if (x < 0) {
-                Canvas.clearCanvas();
-                x = width / 2;
-                y = height / 2;
-                continue;
-            }
-            else if (y < 0) {
-                Canvas.clearCanvas();
-                x = width / 2;
-                y = height / 2;
-                continue;
-            }
-
-        }
-
     }
 }
