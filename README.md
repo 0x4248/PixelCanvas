@@ -145,6 +145,27 @@ PixelUtil.rectangle.dottedOutline(canvas, x, y, width, height, color, dotSize)
 
 This outlines a rectangle with the top left corner at (x, y) and the bottom right corner at (x + width, y + height) with the specified color and a dotted line with the specified dot size.
 
+### Circle
+
+```java
+PixelUtil.circle.fill(Canvas, x, y, radius, color);
+```
+
+This fills a circle with the center at (x, y) and the specified radius with the specified color.
+
+```java
+PixelUtil.circle.outline(Canvas, x, y, radius, color);
+```
+
+This outlines a circle with the center at (x, y) and the specified radius with the specified color.
+
+```java
+PixelUtil.circle.fillOutline(canvas, x, y, radius, FillColor, outlineColor)
+```
+
+This fills a circle with the center at (x, y) and the specified radius with the specified fill color and outlines it with the specified outline color.
+
+
 ## Licence
 
 This project is licenced under the GNU General Public Licence v3.0 please see the [LICENCE](LICENCE) file for more information.

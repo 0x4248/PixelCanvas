@@ -56,4 +56,41 @@ public class PixelUtil {
             canvas.repaint();
         }
     }
+    public static class circle {
+        public static void fill(PixelCanvas canvas, int x, int y, int radius, Color color) {
+            for (int i = x - radius; i < x + radius; i++) {
+                for (int j = y - radius; j < y + radius; j++) {
+                    if (Math.sqrt(Math.pow(i - x, 2) + Math.pow(j - y, 2)) < radius) {
+                        canvas.setPixelWithoutUpdate(i, j, color);
+                    }
+                }
+            }
+            canvas.repaint();
+        }
+
+        public static void outline(PixelCanvas canvas, int x, int y, int radius, Color color) {
+            for (int i = x - radius; i < x + radius; i++) {
+                if (Math.sqrt(Math.pow(i - x, 2) + Math.pow(y - radius, 2)) < radius) {
+                    canvas.setPixelWithoutUpdate(i, y - radius, color);
+                }
+                if (Math.sqrt(Math.pow(i - x, 2) + Math.pow(y + radius, 2)) < radius) {
+                    canvas.setPixelWithoutUpdate(i, y + radius, color);
+                }
+            }
+            for (int i = y - radius; i < y + radius; i++) {
+                if (Math.sqrt(Math.pow(x - radius, 2) + Math.pow(i - y, 2)) < radius) {
+                    canvas.setPixelWithoutUpdate(x - radius, i, color);
+                }
+                if (Math.sqrt(Math.pow(x + radius, 2) + Math.pow(i - y, 2)) < radius) {
+                    canvas.setPixelWithoutUpdate(x + radius, i, color);
+                }
+            }
+            canvas.repaint();
+        }
+
+        public static void fillOutline(PixelCanvas canvas, int x, int y, int radius, Color fillColor, Color outlineColor) {
+            fill(canvas, x, y, radius, fillColor);
+            outline(canvas, x, y, radius, outlineColor);
+        }
+    }
 }
