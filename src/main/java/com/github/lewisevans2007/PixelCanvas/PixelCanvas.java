@@ -39,6 +39,13 @@ public class PixelCanvas extends JPanel {
         repaint();
     }
 
+    public void setPixelWithoutUpdate(int x, int y, Color color) {
+        Graphics2D g = canvas.createGraphics();
+        g.setColor(color);
+        g.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
+        g.dispose();
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

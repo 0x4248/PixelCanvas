@@ -15,21 +15,23 @@ public class PixelUtil {
         public static void fill(PixelCanvas canvas, int x, int y, int width, int height, Color color) {
             for (int i = x; i < x + width; i++) {
                 for (int j = y; j < y + height; j++) {
-                    canvas.setPixel(i, j, color);
+                    canvas.setPixelWithoutUpdate(i, j, color);
                 }
             }
+            canvas.repaint();
         }
 
         public static void outline(PixelCanvas canvas, int x, int y, int width, int height, Color color) {
             for (int i = x; i < x + width; i++) {
-                canvas.setPixel(i, y, color);
-                canvas.setPixel(i, y + height, color);
+                canvas.setPixelWithoutUpdate(i, y, color);
+                canvas.setPixelWithoutUpdate(i, y + height, color);
             }
             for (int i = y; i < y + height; i++) {
-                canvas.setPixel(x, i, color);
-                canvas.setPixel(x + width, i, color);
+                canvas.setPixelWithoutUpdate(x, i, color);
+                canvas.setPixelWithoutUpdate(x + width, i, color);
             }
-            canvas.setPixel(x+width, y+height, color);
+            canvas.setPixelWithoutUpdate(x+width, y+height, color);
+            canvas.repaint();
         }
 
         public static void fillOutline(PixelCanvas canvas, int x, int y, int width, int height, Color fillColor, Color outlineColor) {
@@ -40,16 +42,18 @@ public class PixelUtil {
         public static void dottedOutline(PixelCanvas canvas, int x, int y, int width, int height, Color color) {
             for (int i = x; i < x + width; i++) {
                 if (i % 2 == 0) {
-                    canvas.setPixel(i, y, color);
-                    canvas.setPixel(i, y + height, color);
+                    canvas.setPixelWithoutUpdate(i, y, color);
+                    canvas.setPixelWithoutUpdate(i, y + height, color);
                 }
             }
             for (int i = y; i < y + height; i++) {
                 if (i % 2 == 0) {
-                    canvas.setPixel(x, i, color);
-                    canvas.setPixel(x + width, i, color);
+                    canvas.setPixelWithoutUpdate(x, i, color);
+                    canvas.setPixelWithoutUpdate(x + width, i, color);
                 }
             }
+            canvas.setPixelWithoutUpdate(x+width, y+height, color);
+            canvas.repaint();
         }
     }
 }
