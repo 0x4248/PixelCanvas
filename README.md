@@ -10,8 +10,8 @@ Download the jar file from the releases page and add it to your project. This ca
 
 In `Main.java`:
 ```java
-import com.github.lewisevans2007.PixelCanvas.PixelCanvas;
-import com.github.lewisevans2007.PixelCanvas.PixelUtil;
+import com.github.0x4248.PixelCanvas.PixelCanvas;
+import com.github.0x4248.PixelCanvas.PixelUtil;
 
 import javax.swing.*;
 import java.awt.*;
@@ -39,8 +39,8 @@ public class Main {
 Lets go line by line:
 
 ```java
-import com.github.lewisevans2007.PixelCanvas.PixelCanvas;
-import com.github.lewisevans2007.PixelCanvas.PixelUtil;
+import com.github.0x4248.PixelCanvas.PixelCanvas;
+import com.github.0x4248.PixelCanvas.PixelUtil;
 ```
 
 This imports the PixelCanvas and PixelUtil classes.
