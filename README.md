@@ -8,6 +8,8 @@ By the end of this section you should have a basic window with a red screen at 1
 
 Download the jar file from the releases page and add it to your project. This can be done in intelij by going to `File -> Project Structure -> Libraries -> + -> Java -> Select the jar file`.
 
+**Note:** Make sure to put in the `_` before the `0x4248` in the package name since java does not allow package names to start with numbers.
+
 In `Main.java`:
 ```java
 import com.github._0x4248.PixelCanvas.PixelCanvas;
