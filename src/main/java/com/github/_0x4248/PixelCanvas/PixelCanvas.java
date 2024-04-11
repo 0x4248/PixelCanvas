@@ -6,7 +6,7 @@
  * By: 0x4248
  */
 
-package com.github.0x4248.PixelCanvas;
+package com.github._0x4248.PixelCanvas;
 
 import javax.swing.*;
 import java.awt.*;
