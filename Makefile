@@ -8,7 +8,7 @@ all: compile compile_to_jar
 
 compile:
 
-	javac -parameters -d . src/main/java/com/github/0x4248/*.java src/main/java/com/github/0x4248/PixelCanvas/*.java
+	javac -parameters -d . src/main/java/com/github/_0x4248/PixelCanvasDemos/*.java src/main/java/com/github/_0x4248/PixelCanvas/*.java
 	
 compile_to_jar:
 	jar cfm PixelCanvas.jar META-INF/MANIFEST.MF -C . com
