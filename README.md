@@ -167,6 +167,19 @@ PixelUtil.circle.fillOutline(canvas, x, y, radius, FillColor, outlineColor)
 
 This fills a circle with the center at (x, y) and the specified radius with the specified fill color and outlines it with the specified outline color.
 
+### Line
+
+```java
+PixelUtil.line.draw(Canvas, x1, y1, x2, y2, color);
+```
+
+This draws a line from (x1, y1) to (x2, y2) with the specified color.
+
+```java
+PixelUtil.line.dotted(Canvas, x1, y1, x2, y2, color, dotSize);
+```
+
+This draws a dotted line from (x1, y1) to (x2, y2) with the specified color and dot size.
 
 ## Licence
 
