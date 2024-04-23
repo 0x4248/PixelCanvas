@@ -15,7 +15,6 @@ import com.github._0x4248.PixelCanvas.Mouse;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) {
