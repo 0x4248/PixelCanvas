@@ -13,7 +13,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class PixelCanvas extends JPanel {
-    private BufferedImage canvas;
+    BufferedImage canvas;
     int pixelSize;
     public PixelCanvas(int width, int height, int _pixelSize) {
         width *= _pixelSize;
