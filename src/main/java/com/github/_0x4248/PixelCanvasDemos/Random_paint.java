@@ -10,7 +10,6 @@ package com.github._0x4248.PixelCanvasDemos;
 
 import com.github._0x4248.PixelCanvas.PixelCanvas;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
@@ -26,8 +25,6 @@ public class Random_paint {
     static int y = height / 2;
 
     public static void main(String[] args) throws InterruptedException {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-
         JFrame frame = new JFrame("Pixel Canvas");
         PixelCanvas Canvas = new PixelCanvas(width, height, pixelSize);
         frame.getContentPane().add(Canvas);

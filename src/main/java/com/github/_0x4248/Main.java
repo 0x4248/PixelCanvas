@@ -11,7 +11,6 @@ package com.github._0x4248;
 
 import com.github._0x4248.PixelCanvas.PixelCanvas;
 import com.github._0x4248.PixelCanvas.PixelUtil;
-import com.github._0x4248.PixelCanvas.Mouse;
 
 import javax.swing.*;
 import java.awt.*;
